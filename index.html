@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <style type="text/css">
+  	/*.teclado img:hover{
+  		-ms-transform: scale(0.9); /* IE 9 
+	    -webkit-transform: scale(0.9); /* Safari 3-8 
+	    transform: scale(0.9); 
+  	}*/
+  </style>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript">
+  function iniciar_eventos()
+  {
+
+	document.getElementById("on").addEventListener("click", function (){objcalculadora.click("on");});
+    document.getElementById("on").addEventListener("mousedown", function (){objcalculadora.mousedown("on");});
+	document.getElementById("on").addEventListener("mouseup", function (){objcalculadora.mouseup("on");});
+    document.getElementById("on").addEventListener("mouseout", function (){objcalculadora.mouseout("on");});	
+    
+	document.getElementById("sign").addEventListener("click", function (){objcalculadora.click("sign");});
+    document.getElementById("sign").addEventListener("mousedown", function (){objcalculadora.mousedown("sign");});
+	document.getElementById("sign").addEventListener("mouseup", function (){objcalculadora.mouseup("sign");});
+    document.getElementById("sign").addEventListener("mouseout", function (){objcalculadora.mouseout("sign");});
+
+	document.getElementById("raiz").addEventListener("click", function (){objcalculadora.click("raiz");});
+    document.getElementById("raiz").addEventListener("mousedown", function (){objcalculadora.mousedown("raiz");});
+	document.getElementById("raiz").addEventListener("mouseup", function (){objcalculadora.mouseup("raiz");});
+    document.getElementById("raiz").addEventListener("mouseout", function (){objcalculadora.mouseout("raiz");});	
+
+	document.getElementById("dividido").addEventListener("click", function (){objcalculadora.click("dividido");});
+    document.getElementById("dividido").addEventListener("mousedown", function (){objcalculadora.mousedown("dividido");});
+	document.getElementById("dividido").addEventListener("mouseup", function (){objcalculadora.mouseup("dividido");});
+    document.getElementById("dividido").addEventListener("mouseout", function (){objcalculadora.mouseout("dividido");});	
+    
+	document.getElementById("7").addEventListener("click", function (){objcalculadora.click("7");});
+    document.getElementById("7").addEventListener("mousedown", function (){objcalculadora.mousedown("7");});
+	document.getElementById("7").addEventListener("mouseup", function (){objcalculadora.mouseup("7");});
+    document.getElementById("7").addEventListener("mouseout", function (){objcalculadora.mouseout("7");});	
+
+	document.getElementById("8").addEventListener("click", function (){objcalculadora.click("8");});
+    document.getElementById("8").addEventListener("mousedown", function (){objcalculadora.mousedown("8");});
+	document.getElementById("8").addEventListener("mouseup", function (){objcalculadora.mouseup("8");});
+    document.getElementById("8").addEventListener("mouseout", function (){objcalculadora.mouseout("8");});	
+
+	document.getElementById("9").addEventListener("click", function (){objcalculadora.click("9");});
+    document.getElementById("9").addEventListener("mousedown", function (){objcalculadora.mousedown("9");});
+	document.getElementById("9").addEventListener("mouseup", function (){objcalculadora.mouseup("9");});
+    document.getElementById("9").addEventListener("mouseout", function (){objcalculadora.mouseout("9");});	
+    
+	document.getElementById("por").addEventListener("click", function (){objcalculadora.click("por");});
+    document.getElementById("por").addEventListener("mousedown", function (){objcalculadora.mousedown("por");});
+	document.getElementById("por").addEventListener("mouseup", function (){objcalculadora.mouseup("por");});
+    document.getElementById("por").addEventListener("mouseout", function (){objcalculadora.mouseout("por");});	
+
+	document.getElementById("4").addEventListener("click", function (){objcalculadora.click("4");});
+    document.getElementById("4").addEventListener("mousedown", function (){objcalculadora.mousedown("4");});
+	document.getElementById("4").addEventListener("mouseup", function (){objcalculadora.mouseup("4");});
+    document.getElementById("4").addEventListener("mouseout", function (){objcalculadora.mouseout("4");});	
+    
+	document.getElementById("5").addEventListener("click", function (){objcalculadora.click("5");});
+    document.getElementById("5").addEventListener("mousedown", function (){objcalculadora.mousedown("5");});
+	document.getElementById("5").addEventListener("mouseup", function (){objcalculadora.mouseup("5");});
+    document.getElementById("5").addEventListener("mouseout", function (){objcalculadora.mouseout("5");});	
+
+	document.getElementById("6").addEventListener("click", function (){objcalculadora.click("6");});
+    document.getElementById("6").addEventListener("mousedown", function (){objcalculadora.mousedown("6");});
+	document.getElementById("6").addEventListener("mouseup", function (){objcalculadora.mouseup("6");});
+    document.getElementById("6").addEventListener("mouseout", function (){objcalculadora.mouseout("6");});	
+
+	document.getElementById("menos").addEventListener("click", function (){objcalculadora.click("menos");});
+    document.getElementById("menos").addEventListener("mousedown", function (){objcalculadora.mousedown("menos");});
+	document.getElementById("menos").addEventListener("mouseup", function (){objcalculadora.mouseup("menos");});
+    document.getElementById("menos").addEventListener("mouseout", function (){objcalculadora.mouseout("menos");});	
+
+	document.getElementById("3").addEventListener("click", function (){objcalculadora.click("3");});
+    document.getElementById("3").addEventListener("mousedown", function (){objcalculadora.mousedown("3");});
+	document.getElementById("3").addEventListener("mouseup", function (){objcalculadora.mouseup("3");});
+    document.getElementById("3").addEventListener("mouseout", function (){objcalculadora.mouseout("3");});	
+
+
+	document.getElementById("2").addEventListener("click", function (){objcalculadora.click("2");});
+    document.getElementById("2").addEventListener("mousedown", function (){objcalculadora.mousedown("2");});
+	document.getElementById("2").addEventListener("mouseup", function (){objcalculadora.mouseup("2");});
+    document.getElementById("2").addEventListener("mouseout", function (){objcalculadora.mouseout("2");});	
+    
+	document.getElementById("1").addEventListener("click", function (){objcalculadora.click("1");});
+    document.getElementById("1").addEventListener("mousedown", function (){objcalculadora.mousedown("1");});
+	document.getElementById("1").addEventListener("mouseup", function (){objcalculadora.mouseup("1");});
+    document.getElementById("1").addEventListener("mouseout", function (){objcalculadora.mouseout("1");});	
+
+	document.getElementById("0").addEventListener("click", function (){objcalculadora.click("0");});
+    document.getElementById("0").addEventListener("mousedown", function (){objcalculadora.mousedown("0");});
+	document.getElementById("0").addEventListener("mouseup", function (){objcalculadora.mouseup("0");});
+    document.getElementById("0").addEventListener("mouseout", function (){objcalculadora.mouseout("0");});	
+
+	document.getElementById("punto").addEventListener("click", function (){objcalculadora.click("punto");});
+    document.getElementById("punto").addEventListener("mousedown", function (){objcalculadora.mousedown("punto");});
+	document.getElementById("punto").addEventListener("mouseup", function (){objcalculadora.mouseup("punto");});
+    document.getElementById("punto").addEventListener("mouseout", function (){objcalculadora.mouseout("punto");});	
+    
+	document.getElementById("igual").addEventListener("click", function (){objcalculadora.click("igual");});
+    document.getElementById("igual").addEventListener("mousedown", function (){objcalculadora.mousedown("igual");});
+	document.getElementById("igual").addEventListener("mouseup", function (){objcalculadora.mouseup("igual");});
+    document.getElementById("igual").addEventListener("mouseout", function (){objcalculadora.mouseout("igual");});	
+    
+	document.getElementById("mas").addEventListener("click", function (){objcalculadora.click("mas");});
+    document.getElementById("mas").addEventListener("mousedown", function (){objcalculadora.mousedown("mas");});
+	document.getElementById("mas").addEventListener("mouseup", function (){objcalculadora.mouseup("mas");});
+    document.getElementById("mas").addEventListener("mouseout", function (){objcalculadora.mouseout("mas");});		   
+  }
+   </script>
+</head>
+<body onload="iniciar_eventos();">
+  <div class="fondo">
+    <div class="titulo-container">
+      <h1>¡No pierdas <span>la cuenta!</span></h1>
+    </div>
+
+    <div class="notas-container">
+      <h2>Tus apuntes...</h2>
+      <textarea class="nota-input" placeholder="Escribe aquí..."></textarea>
+    </div>
+
+    <div id="calculadoraFondo">
+      <div class="pantalla">
+        <span id="display">0</span>
+      </div>
+
+      <div class="teclado">
+        <img src="image/ON.png" alt="On" class="tecla" id="on" />
+        <!--<img src="image/sign.png" alt="signo" class="tecla" id="sign" onclick="objcalculadora.clicksign()" onmousedown="objcalculadora.mousedown('sign')" onmouseup="objcalculadora.mouseup('sign')" onmouseout="objcalculadora.mouseout('sign')"/>-->
+		<img src="image/sign.png" alt="signo" class="tecla" id="sign" />
+        <img src="image/raiz.png" alt="raiz" class="tecla" id="raiz"  />
+        <img src="image/dividido.png" alt="dividido" class="tecla divide" id="dividido" />
+
+        <img src="image/7.png" alt="7" class="tecla" id="7" />
+        <img src="image/8.png" alt="8" class="tecla" id="8" />
+        <img src="image/9.png" alt="9" class="tecla" id="9" />
+        <img src="image/por.png" alt="por" class="tecla multiplica" id="por" />
+
+        <img src="image/4.png" alt="4" class="tecla" id="4" />
+        <img src="image/5.png" alt="5" class="tecla" id="5" />
+        <img src="image/6.png" alt="6" class="tecla" id="6" />
+        <img src="image/menos.png" alt="menos" class="tecla resta" id="menos" "/>
+
+        <div class="row">
+          <div class="col1">
+            <img src="image/1.png" alt="1" class="tecla" id="1" />
+            <img src="image/2.png" alt="2" class="tecla" id="2" />
+            <img src="image/3.png" alt="3" class="tecla" id="3" />
+
+            <img src="image/0.png" alt="0" class="tecla" id="0" />
+            <img src="image/punto.png" alt="punto" class="tecla" id="punto" />
+            <img src="image/igual.png" alt="igual" class="tecla" id="igual"/>
+          </div>
+          <div class="col2">
+            <img src="image/mas.png" alt="mas" class="tecla suma" id="mas"/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container-libreta">
+      <div class="libreta">
+        <div class="contenido-ingresos">
+          <h3>Ingresos</h3>
+          <ul>
+            <li><span>Salario: </span>$1300.00</li>
+            <li><span>Bonificación: </span>$200.00</li>
+          </ul>
+        </div>
+        <div class="contenido-egresos">
+          <h3>Egresos</h3>
+          <ul>
+            <li><span>Renta: </span>$300.00</li>
+            <li><span>Alimentos: </span>$250.00</li>
+            <li><span>Restaurantes: </span>$120.00</li>
+            <li><span>Automóvil: </span>$100.00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
